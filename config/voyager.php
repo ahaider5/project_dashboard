@@ -187,10 +187,12 @@ return [
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
         //'css/custom.css',
+        // 'css/webdatarocks.min.css',
     ],
 
     'additional_js' => [
         //'js/custom.js',
+        // 'js/webdatarocks.js',
     ],
 
     'googlemaps' => [

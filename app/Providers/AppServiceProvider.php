@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 
 use Illuminate\Support\Facades\Schema;
+use ConsoleTVs\Charts\Registrar as Charts;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,9 +24,16 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Charts $charts)
     {
         //
         Schema::defaultStringLength(191);
+
+        
+        $charts->register([
+            \App\Charts\SampleChart::class,
+            \App\Charts\FundraiserChart::class,
+            \App\Charts\EarningChart::class
+        ]);
     }
 }
