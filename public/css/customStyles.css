@@ -1,0 +1,20 @@
+.custom-li {
+    background-color: aliceblue;
+    font-size: x-large;
+}
+
+.font-large-2 {
+    font-size: 3rem !important;
+}
+
+.special-container {
+    display:table;
+    width: 100%;
+    /* margin-top: 5px; */
+    padding: 5px 0 0 0;
+    box-sizing: border-box;
+}
+
+.my-custom-chart {
+    height: 250px;
+}
