@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 
 class FundraiserChart extends BaseChart
 {
+    public ?array $middlewares = ['auth'];
+
     /**
      * Handles the HTTP request for the given chart.
      * It must always return an instance of Chartisan

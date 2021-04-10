@@ -37,7 +37,8 @@ class ReportController extends \koolreport\KoolReport
     }
 
     public function getAllUsers() {
-        return response()->json(DB::table('users')->get()->toArray());
+        // return Response::json($data);
+        return response()->json(DB::table('users')->get());
         // return view("reports.user-report.index");
     }
 }

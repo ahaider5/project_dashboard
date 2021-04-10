@@ -29,11 +29,15 @@ class AppServiceProvider extends ServiceProvider
         //
         Schema::defaultStringLength(191);
 
-        
+
         $charts->register([
+            \App\Charts\UserAgePieChart::class,
+            \App\Charts\UserGenderPieChart::class,
+            \App\Charts\UserLocationPieChart::class,
+            \App\Charts\UserDevicePieChart::class,
             \App\Charts\SampleChart::class,
             \App\Charts\FundraiserChart::class,
-            \App\Charts\EarningChart::class
+            \App\Charts\EarningChart::class,
         ]);
     }
 }

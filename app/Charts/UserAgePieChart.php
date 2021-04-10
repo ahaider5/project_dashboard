@@ -8,10 +8,8 @@ use Chartisan\PHP\Chartisan;
 use ConsoleTVs\Charts\BaseChart;
 use Illuminate\Http\Request;
 
-class SampleChart extends BaseChart
+class UserAgePieChart extends BaseChart
 {
-    public ?array $middlewares = ['auth'];
-
     /**
      * Handles the HTTP request for the given chart.
      * It must always return an instance of Chartisan
@@ -20,10 +18,8 @@ class SampleChart extends BaseChart
     public function handler(Request $request): Chartisan
     {
         return Chartisan::build()
-            ->labels(['Admin', 'Moderator', 'Manager', 'User'])
-            ->dataset('January', [1, 2, 3, 4])
-            ->dataset('February', [2, 5, 1, 6])
-            ->dataset('March', [2, 4, 6, 15]);
+            ->labels(['18-25', '26-35', '36-45', '46-55'])
+            ->dataset('Sample', [70, 20, 10, 0]);
             // ->toJSON();
     }
 }
